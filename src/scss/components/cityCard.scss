@@ -1,0 +1,42 @@
+.cityCard{
+    border-radius: 16px;
+    border: 1px solid var(--light-pop-boder, rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(40px);
+    overflow: hidden;
+    padding: 30px;
+    background-color: $cardBackground;
+    &__deleteCity{
+        width: min-content;
+        margin-bottom: 0.2rem;
+    }
+    &__cityName{
+        color: $cardTextColor;
+    }
+    &__day{
+        gap: 0.5rem;
+        &__weekDay, &__dayTemperature, &__nightTemperature{
+            color: $cardTextColor;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 20px; /* 125% */
+        }
+        &__weekDay{
+            width: 4rem;
+        }
+        &__conditionImage{
+            padding-right: 1rem;
+            img{
+                width: 36px;
+                height: 36px;
+            }
+        }
+        &__dayTemperature, &__nightTemperature{
+            text-align: right;
+            width: 2rem;
+        }
+        &__nightTemperature{
+            color: $cardNightTextColor;
+        }
+    }
+}
